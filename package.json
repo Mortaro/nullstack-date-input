@@ -1,0 +1,15 @@
+{
+  "name": "nullstack-date-input",
+  "version": "1.0.0",
+  "description": "Date Input for Nullstack",
+  "main": "src/DateInput.njs",
+  "author": "Mortaro",
+  "license": "MIT",
+  "repository": "github:Mortaro/nullstack-date-input",
+  "devDependencies": {
+    "nullstack": "*"
+  },
+  "peerDependencies": {
+    "nullstack": "*"
+  }
+}
