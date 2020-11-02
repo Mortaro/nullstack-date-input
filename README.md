@@ -17,7 +17,7 @@ import DateInput from 'nullstack-date-input';
 
 class Application extends Nullstack {
 
-  deadline = 10;
+  deadline = new Date();
 
   updateDeadline({value}) {
     this.deadline = value;
@@ -42,7 +42,7 @@ import DateInput from 'nullstack-date-input';
 
 class Application extends Nullstack {
 
-  deadline = 10;
+  deadline = new Date();
 
   render() {
     return (
