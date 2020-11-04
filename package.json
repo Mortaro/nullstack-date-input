@@ -1,6 +1,6 @@
 {
   "name": "nullstack-date-input",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Date Input for Nullstack",
   "main": "src/DateInput.njs",
   "author": "Mortaro",

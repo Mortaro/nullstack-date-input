@@ -12,9 +12,11 @@ class DateInput extends Nullstack {
 
   update({value}) {
     if(this.value.length == 10 || this.value.length == 0) {
-      const formatted = Intl.DateTimeFormat('pt-BR', {day: 'numeric', month: 'numeric', year: 'numeric'}).format(value);
-      if(formatted != this.value) {
-        this.value = formatted;
+      if(value) {
+        const formatted = Intl.DateTimeFormat('pt-BR', {day: 'numeric', month: 'numeric', year: 'numeric'}).format(value);
+        if(formatted != this.value) {
+          this.value = formatted;
+        }
       }
     }
   }
