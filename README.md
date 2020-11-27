@@ -65,6 +65,16 @@ You can override it by passing true to the endOfDay attribute
 <DateInput bind={this.deadline} endOfDay />
 ```
 
+## Customization
+
+You can customize the following attributes:
+
+- id
+- class
+- placeholder
+- disabled
+- data-*
+
 ## Caveats
 
 Currently this component only works with the DD/MM/YYYY format
