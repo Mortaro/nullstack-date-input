@@ -21,7 +21,7 @@ class DateInput extends Nullstack {
     }
   }
 
-  parse({event, onchange, endOfDay}) {
+  parse({event, onchange, endOfDay, beginningOfDay}) {
     let v = event.target.value.replace(/\D/g,'').slice(0, 10);
     if (v.length >= 5) {
       this.value = `${v.slice(0,2)}/${v.slice(2,4)}/${v.slice(4)}`;
@@ -43,21 +43,15 @@ class DateInput extends Nullstack {
         if(endOfDay) {
           date.setHours(23,59,59,999);
         }
+        if(beginningOfDay) {
+          date.setHours(0,0,0,0);
+        }
         onchange && onchange({value: date});
       }
     }
   }
 
-  dataset(context) {
-    return Object.keys(context).filter((key) => {
-      return key.startsWith('data');
-    }).reduce((accumulator, key) => {
-      accumulator[key] = context[key];
-      return accumulator;
-    }, {});
-  }
-
-  render({name, placeholder, class: klass, id, disabled}) {
+  render({name, placeholder, class: klass, id, disabled, data}) {
     return (
       <input
         type="tel"
@@ -69,7 +63,7 @@ class DateInput extends Nullstack {
         class={klass}
         id={id}
         disabled={disabled}
-        {...this.dataset()}
+        data={data}
       />
     )
   }

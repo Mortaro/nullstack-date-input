@@ -59,10 +59,11 @@ export default Application;
 
 The default hour is the start of the day
 
-You can override it by passing true to the endOfDay attribute
+You can override it by passing true to the endOfDay or beginningOfDay attribute
 
 ```jsx
-<DateInput bind={this.deadline} endOfDay />
+<DateInput bind={this.startDate} beginningOfDay />
+<DateInput bind={this.endDate} endOfDay />
 ```
 
 ## Customization
